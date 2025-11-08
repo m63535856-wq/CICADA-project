@@ -1,7 +1,10 @@
 import { Briefcase, MapPin, Clock, DollarSign } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 const Careers = () => {
+  const navigate = useNavigate();
+
   const openings = [
     {
       title: "Senior Full Stack Developer",
@@ -45,6 +48,14 @@ const Careers = () => {
     { title: "Unlimited PTO", description: "Take time off when you need it" },
     { title: "401(k) Matching", description: "Generous retirement plan contributions" },
   ];
+
+  const handleApply = (jobTitle: string, department: string) => {
+    navigate(`/job-application?job=${encodeURIComponent(jobTitle)}&dept=${encodeURIComponent(department)}`);
+  };
+
+  const handleGeneralApplication = () => {
+    navigate('/job-application?job=General Application&dept=Various');
+  };
 
   return (
     <div className="min-h-screen pt-20">
@@ -112,7 +123,10 @@ const Careers = () => {
                       </div>
                     </div>
                   </div>
-                  <Button className="bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:shadow-primary/50 transition-all md:ml-4">
+                  <Button 
+                    onClick={() => handleApply(job.title, job.department)}
+                    className="bg-gradient-to-r from-primary to-accent hover:shadow-lg hover:shadow-primary/50 transition-all md:ml-4"
+                  >
                     Apply Now
                   </Button>
                 </div>
@@ -131,7 +145,11 @@ const Careers = () => {
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               We're always looking for talented individuals. Send us your resume and let's talk about future opportunities.
             </p>
-            <Button size="lg" className="bg-gradient-to-r from-primary to-accent">
+            <Button 
+              size="lg" 
+              onClick={handleGeneralApplication}
+              className="bg-gradient-to-r from-primary to-accent"
+            >
               Send Your Resume
             </Button>
           </div>

@@ -19,7 +19,9 @@ import Signup from "./pages/Signup";
 
 import Chatbot from "./components/Chatbot";
 
+import JobApplication from "./pages/JobApplication"; // Add this import
 
+// In your Routes section:
 
 
 const queryClient = new QueryClient();
@@ -44,6 +46,7 @@ const App = () => (
                   <Route path="/projects" element={<Projects />} />
                   <Route path="/contact" element={<Contact />} />
                   <Route path="/careers" element={<Careers />} />
+                  <Route path="/job-application" element={<JobApplication />} />
                   <Route path="/blog" element={<Blog />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>

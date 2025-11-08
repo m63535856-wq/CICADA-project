@@ -1,0 +1,123 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+
+# ==============================
+# 📁 ROOT LEVEL IGNORE
+# ==============================
+
+# Environment files (VERY IMPORTANT)
+*.env
+.env*
+!example.env
+
+# Python virtual environments
+venv/
+env/
+
+# Node modules (frontend)
+node_modules/
+
+# Build outputs
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# macOS / Linux junk
+.DS_Store
+.cache/
+Thumbs.db
+
+# Editor settings
+.vscode/
+.idea/
+
+# Python cache / compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+
+# Coverage and testing
+.coverage
+coverage/
+pytest_cache/
+
+# Supabase generated folders (if using CLI)
+.supabase/
+
+# ==============================
+# 📁 FRONTEND
+# ==============================
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.*
+
+# Vite cache
+frontend/.vite/
+frontend/.vite-cache/
+
+# ==============================
+# 📁 BACKEND
+# ==============================
+backend/__pycache__/
+backend/venv/
+backend/.env
+backend/.env.*
+
+# Flask instance folder
+backend/instance/
+
+# SQLite backup files (if any)
+*.db
+*.sqlite
+*.sqlite3
+
+# ==============================
+# 📁 ASSETS / GENERATED FILES
+# ==============================
+*.png~
+*.jpg~
+*.jpeg~
+*.svg~
+*.ico~
+uploads/
+temp_uploads/
+
+# AI processing temp files
+ai_cache/
+ai_temp/
+
